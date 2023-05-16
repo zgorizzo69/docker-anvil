@@ -1,13 +1,13 @@
-FROM ghcr.io/foundry-rs/foundry:latest 
+FROM ghcr.io/foundry-rs/foundry:latest
 
 # Définit la variable d'environnement pour le port de l'entrypoint
-ARG PORT 
+ARG PORT
 ENV PORT=${PORT}
-ARG MNEMONIC  
+ARG MNEMONIC
 ENV MNEMONIC=${MNEMONIC}
-ARG FORK_URL  
+ARG FORK_URL
 ENV FORK_URL=${FORK_URL}
 # Expose le port de l'entrypoint
 EXPOSE $PORT
 
-ENTRYPOINT anvil --host 0.0.0.0 -m "$MNEMONIC" -p $PORT --fork-url $FORK_URL
+ENTRYPOINT anvil --host 0.0.0.0 -m "$MNEMONIC" -p $PORT --fork-url $FORK_URL --no-cors
