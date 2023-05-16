@@ -7,4 +7,4 @@ ENV MNEMONIC=${MNEMONIC}
 # Expose le port de l'entrypoint
 EXPOSE $PORT
 
-ENTRYPOINT anvil --host 0.0.0.0 -m $MNEMONIC --fork-url https://rpc.ankr.com/eth
+ENTRYPOINT anvil --host 0.0.0.0 -m "$MNEMONIC" --fork-url https://rpc.ankr.com/eth
