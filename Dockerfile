@@ -1,7 +1,8 @@
+FROM ghcr.io/foundry-rs/foundry:latest 
+
 # Définit la variable d'environnement pour le port de l'entrypoint
 ARG PORT 
-ARG MNEMONIC 
-FROM ghcr.io/foundry-rs/foundry:latest 
+ARG MNEMONIC  
 
 # Expose le port de l'entrypoint
 EXPOSE $PORT
