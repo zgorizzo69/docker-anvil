@@ -10,4 +10,4 @@ ENV FORK_URL=${FORK_URL}
 # Expose le port de l'entrypoint
 EXPOSE $PORT
 
-ENTRYPOINT anvil --host 0.0.0.0 -m "$MNEMONIC" -p $PORT --fork-url $FORK_URL --chain-id $CHAIN_ID --allow-origin "*"
+ENTRYPOINT anvil --host 0.0.0.0 -m "$MNEMONIC" -p $PORT --fork-url $FORK_URL --chain-id $CHAIN_ID --allow-origin "*" --auto-impersonate
